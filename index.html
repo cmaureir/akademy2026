@@ -46,132 +46,132 @@
      MOTIVATION
      ============================================================ -->
 
-<section data-transition="fade-in fade-out" data-background-image="img/background_cpp.svg">
-  <h1 class="r-fit-text">C++ is <i class="qt-neon">not</i> the only</h1>
-  <h1 class="r-fit-text">way to write <i class="qt-neon">Qt</i></h1>
+<section data-transition="fade-in fade-out">
+  <h1 class="r-fit-text">The future of <i class="qt-neon">Qt</i> is to be</h1>
+  <h1 class="r-fit-text">a <i class="qt-lemon">language independent</i> framework</h1>
 </section>
 
-<section data-transition="fade-in fade-out">
-  <h2>What is the <i class="qt-neon">motivation</i>?</h2>
-  <ul class="x80">
-    <li class="fragment">Developers arrive already fluent in <i class="qt-neon">another language</i></li>
-    <li class="fragment">Qt Quick is a great UI layer &mdash; the logic does not have to be C++</li>
-    <li class="fragment">Lowering the barrier grows the <i class="qt-neon">Qt</i> and <i class="qt-lemon">KDE</i> contributor pool</li>
-    <li class="fragment">Language showcase: meet people where they already are</li>
-  </ul>
+<section data-transition="fade-in fade-out" data-background-image="img/background_cpp.svg">
+  <h1 class="r-fit-text"><i class="cpp-blue">C++</i> has been the most popular</h1>
+  <h1 class="r-fit-text">way to write <i class="qt-neon">Qt</i> code</h1>
+</section>
+
+<section data-transition="fade-in fade-out" data-background-image="img/background_cpp.svg">
+  <h1 class="r-fit-text"><i class="cpp-blue">C++</i> has been the most popular</h1>
+  <h1 class="r-fit-text">way to write <i class="qt-neon">Qt</i> code</h1>
 </section>
 
 <!-- Qt for Python: acknowledge the success this is building on -->
 <section data-transition="fade-in fade-out">
-  <h3>We have known this for a while</h3>
+  <h3>But Python's popularity cannot be neglected</h3>
   <div class="columns c60-40 v-center">
    <div>
     <ul class="x60">
-      <li class="fragment"><i class="python-yellow">Qt for Python</i> is the
-          <b>official</b> binding, maintained by The Qt Company and released on
+      <li class="fragment"><i class="python-yellow">Qt for Python</i> (PySide) is the
+          <b>official</b> binding; maintained by The Qt Company and released on
           <i class="qt-neon">Qt's own cycle</i></li>
-      <li class="fragment">And it landed in KDE: <code>develop.kde.org</code> documents
-          Python + QML + <i class="qt-lemon">Kirigami</i> as a supported way to build
-          an app &mdash; bindings for KDE Frameworks, a full tutorial, Flatpak packaging</li>
-      <li class="fragment">Nicolas Fella said it here last year: many KDE libraries
-          <i class="qt-neon">already</i> have Python and Rust bindings</li>
+      <li class="fragment"><i class="python-yellow">PyQt</i> is still very popular; maintained by Riverbank Computing.</li>
+      <li class="fragment">Already in KDE: Python + QML + <i class="qt-neon">Kirigami</i> as a supported way to build
+          an app.</li>
     </ul>
    </div>
    <div class="v-center">
     <img style="width: 70%;" src="img/qtforpython_white.png" />
    </div>
   </div>
-  <p class="x40 fragment">None of what follows replaces this. Qt for Python gives you
+  <p class="x60 fragment"><i class="red">Note</i>: None of what follows replaces this. Qt for Python gives you
      <i class="qt-neon">all</i> of Qt.</p>
 </section>
 
 <section data-transition="fade-in fade-out">
-  <h3>And it is not alone</h3>
-  <ul class="x60">
+  <h3>And it's <i class="red">not</i> alone</h3>
+  <ul class="x70">
     <li class="fragment"><a href="https://wiki.qt.io/Language_Bindings">wiki.qt.io/Language_Bindings</a>
         lists <b>25+ projects</b> across some fifteen languages</li>
-    <li class="fragment">Several are genuinely alive &mdash; <i class="qt-mandarin">QtJambi</i>
-        for Java/Kotlin, <i class="python-yellow">PyQt</i> for Python</li>
-    <li class="fragment">Rust alone has <b>six</b> on that page: CXX-Qt, Rust-Qt,
-        qmetaobject-rs, qtrs, qml-rust, qmlrs</li>
-    <li class="fragment">Six attempts at one language should tell us something.
-        Most are one person, chasing an API that never stops moving.</li>
+    <li class="fragment">Several are genuinely alive - <i class="qt-mandarin">QtJambi</i>
+        for Java/Kotlin</li>
+    <li class="fragment">Rust alone has <i class="qt-neon">six</i> on that page:
+      <ul class="x70">
+        <li><code>CXX-Qt, Rust-Qt, qmetaobject-rs, qtrs, qml-rust, qmlrs</code></li>
+        </ul>
+    </ul>
+</section>
+
+
+<section data-transition="fade-in fade-out">
+  <h2>Why this might <i class="red">not always work</i>?</h2>
+  <ul class="x80">
+    <li>Mirror bindings tend to be <i class="qt-lemon">incomplete, or outdated</i></li>
+    <li>there need to be a language "adaption" on Qt/C++ details</li>
+    <li>forcing a language to do <i class="qt-lemon">unnatural</i> things</li>
   </ul>
 </section>
 
 <section data-transition="fade-in fade-out">
-  <h2 class="r-fit-text">So why would Qt add</h2>
-  <h2 class="r-fit-text"><i class="qt-neon">another</i> one?</h2>
-</section>
-
-<section data-transition="fade-in fade-out" data-background-image="img/background_cover.svg">
-  <h3>It <i class="qt-neon">is not</i> another one</h3>
-  <blockquote class="x60">
-    Qt Bridges is explicitly <b>not</b> &ldquo;yet another binding&rdquo;.
-  </blockquote>
-  <ul class="x60">
-    <li class="fragment">A <b>binding</b> mirrors Qt's C++ API into your language, class by
-        class &mdash; and then has to keep mirroring it, forever</li>
-    <li class="fragment">A <b>bridge</b> turns the problem around: <i class="qt-neon">QML owns
-        the UI</i>, your language owns the logic, and only the <i>boundary</i> is crossed</li>
-    <li class="fragment">The docs say it plainly: it &ldquo;does not aim to support every Qt
-        use case&rdquo;. That is the <i class="qt-lemon">design</i>, not a gap.</li>
+  <h2>Additional <i class="qt-neon">motivations</i></h2>
+  <ul class="x80">
+    <li class="fragment"><i class="qt-lemon">New</i> developers already fluent in <i class="qt-neon">other languages</i></li>
+    <li class="fragment">Qt Quick is a great UI layer: the logic does not have to be C++</li>
+    <li class="fragment">Lowering the barrier grows the <i class="qt-neon">Qt</i> and <i class="kde-blue">KDE</i> contributor pool</li>
+    <li class="fragment">Opportunity to go to <i class="qt-mandarin">new communities</i></li>
   </ul>
 </section>
 
-<section data-transition="fade-in fade-out" data-background-image="img/background_cover.svg">
-  <h4>Why that changes the maintenance story</h4>
+<section data-transition="fade-in fade-out">
+  <h2 class="r-fit-text">So should we add</h2>
+  <h2 class="r-fit-text"><i class="qt-neon">another</i> mirror binding?</h2>
+</section>
+
+<section data-transition="fade-in fade-out">
+  <h3>Qt Bridges is explicitly <i class="red">not</i> &ldquo;another mirror binding&rdquo;</h3>
+  <div class="columns c50-c50">
+  <ul class="x80">
+    <li class="fragment">A <i class="qt-lemon">binding</i> mirrors Qt's C++ API into your language, class by
+        class, and then has to keep mirroring it, forever</li>
+  </ul>
+    <ul class="x80">
+    <li class="fragment">A <i class="qt-mandarin">bridge</i> turns the problem around: <i class="qt-neon">QML owns
+        the UI</i>, your language owns the logic</li>
+  </ul>
+</div>
+    <p class="fragment x60">It does not aim to support every Qt
+        use case. That is the <i class="qt-lemon">design</i>, not a gap.</p>
+</section>
+
+<section data-transition="fade-in fade-out">
+  <h3>Changing the maintenance story</h3>
   <div class="columns c50-50">
    <div>
-    <h4 class="x80 qt-mandarin">A binding</h4>
+    <h4 class="x80 qt-lemon fragment">A binding</h4>
     <ul class="x50">
-      <li class="fragment">Surface to maintain = <b>the size of Qt</b></li>
-      <li class="fragment">Every new Qt class, enum and overload is more work owed</li>
-      <li class="fragment">Fall behind once and the gap only widens</li>
-      <li class="fragment">This is precisely how Qyoto, Kimono and most of that
-          list of 25 died</li>
+      <li>Surface to maintain = <b>the size of Qt</b></li>
+      <li>Every new Qt class, enum and overload is more work owed</li>
+      <li>Fall behind once and the gap only widens</li>
+      <li>This is precisely how Qyoto, Kimono and many others died</li>
     </ul>
    </div>
    <div>
-    <h4 class="x80 qt-neon">A bridge</h4>
+    <h4 class="x80 qt-mandarin fragment">A bridge</h4>
     <ul class="x50">
-      <li class="fragment">Surface to maintain = <b>the meta-object boundary</b>:
-          properties, slots, signals, models</li>
-      <li class="fragment">That boundary is small, and it has been stable for
-          <i class="qt-lemon">decades</i></li>
-      <li class="fragment">Qt grows; the bridge does not have to</li>
-      <li class="fragment">You get Qt Quick and Kirigami for free, because the UI
-          was never translated in the first place</li>
+      <li>Surface to maintain = <b>the meta-object boundary</b>: properties, slots, signals, models</li>
+      <li>That boundary is small, and it has been stable for <i class="qt-lemon">decades</i></li>
+      <li>Qt grows; the bridge does not have to</li>
+      <li>You get Qt Quick (and Kirigami) for free!</li>
     </ul>
    </div>
   </div>
 </section>
 
-<section data-transition="fade-in fade-out" data-background-image="img/background_cover.svg">
-  <h2>How a bridge <i class="qt-neon">works</i></h2>
+<section data-transition="fade-in fade-out">
+  <h2>Summary: How a bridge <i class="qt-neon">works</i></h2>
   <ul class="x80">
     <li class="fragment">Keep your logic, data and models in <i class="qt-lemon">your language</i>;
         Qt Quick drives the UI</li>
     <li class="fragment">Each bridge connects your types, properties and methods to QML
         using that language's own <i class="qt-neon">attributes or conventions</i></li>
-    <li class="fragment">You do not adopt a new idiom to get a UI &mdash; the Rust stays
+    <li class="fragment">You do not adopt a new idiom to get a UI - the Rust stays
         Rust, the C# stays C#</li>
     <li class="fragment">No hand-written C++ glue, no <code>moc</code>, no binding layer to keep alive</li>
-  </ul>
-  <p class="x40"><a href="https://qt.io/qt-bridges">qt.io/qt-bridges</a></p>
-</section>
-
-<section data-transition="fade-in fade-out" data-background-image="img/background_cover.svg">
-  <h3>One front end, many <i class="qt-neon">back ends</i></h3>
-  <ul class="x60">
-    <li class="fragment">Qt's framing: <i class="qt-neon">build it once, use it everywhere</i>
-        &mdash; one QML front end, whichever language sits behind it</li>
-    <li class="fragment"><b>Public beta today:</b> <i class="qt-mandarin">Rust</i>
-        (Linux, macOS, Windows) and <i class="qt-violet">C#</i> (Windows x64, Linux x86_64)</li>
-    <li class="fragment"><b>Early access:</b> <i class="python-yellow">Python</i>,
-        <i class="qt-lemon">Swift</i>, <i class="qt-mandarin">Java/Kotlin</i></li>
-    <li class="fragment">So the KDE question is not &ldquo;Rust or C#&rdquo;. It is whether
-        a Kirigami UI can outlive the language <i class="qt-neon">underneath</i> it.</li>
   </ul>
 </section>
 
@@ -181,14 +181,14 @@
 
 <section data-transition="fade-in fade-out">
   <h4>Most used languages</h4>
-  <img src="img/tiobe_july2025.png" />
-  <p class="x40">Source <a href="https://www.tiobe.com/tiobe-index/">TIOBE index, July 2025</a></p>
+  <img src="img/tiobe_sep2026.png" />
+  <p class="x40">Source <a href="https://www.tiobe.com/tiobe-index/">TIOBE index, September 2026</a></p>
 </section>
 
 <section data-transition="fade-in fade-out">
-  <h4>Most admired languages</h4>
-  <img src="img/sosurvey2024_admired.png" />
-  <p class="x40">Source <a href="https://survey.stackoverflow.co/2024/technology#2-programming-scripting-and-markup-languages">Stack Overflow Developer Survey 2024</a></p>
+  <h4>Most admired/desired languages</h4>
+  <img src="img/sosurvey2025_admired.png" />
+  <p class="x40">Source <a href="https://survey.stackoverflow.co/2025/technology#2-programming-scripting-and-markup-languages">Stack Overflow Developer Survey 2025</a></p>
 </section>
 
 <section data-transition="fade-in fade-out">
@@ -197,21 +197,36 @@
    <div>
     <h4 class="qt-mandarin">Rust</h4>
     <ul class="x60">
-      <li><b>82.2%</b> admired &mdash; the most admired language, again</li>
-      <li>Only <b>28.7%</b> have used it &mdash; a large <i class="qt-neon">wants-to</i> gap</li>
+      <li><b>72.4%</b> admired - the most admired language, again</li>
+      <li>Only <b>29.2%</b> have used it - a large <i class="qt-neon">wants-to</i> gap</li>
       <li>In the Linux kernel, Android and Windows</li>
     </ul>
    </div>
    <div>
-    <h4 class="qt-violet">C#</h4>
+    <h4 class="csharp-light-purple">C#</h4>
     <ul class="x60">
-      <li><b>#5</b> on TIOBE at <b>4.87%</b> &mdash; ahead of JavaScript</li>
-      <li><b>64.1%</b> admired, <b>21.6%</b> desired</li>
+      <li><b>#5</b> on TIOBE at <b>4.22%</b> - ahead of JavaScript</li>
+      <li><b>55.8%</b> admired, <b>19.4%</b> desired</li>
       <li>Huge desktop, enterprise and tooling install base</li>
     </ul>
    </div>
   </div>
-  <p class="x40">Sources: TIOBE July 2025; Stack Overflow Survey 2024</p>
+  <p class="x40">Sources: TIOBE Sep 2026; Stack Overflow Survey 2025</p>
+</section>
+
+
+
+<section data-transition="fade-in fade-out">
+  <h3>One front end, many <i class="qt-neon">back ends</i></h3>
+  <div class="r-hstack justify-center fragment" >
+      <div><img style="width: 250px;" src="img/rust_logo_white.png"/></div>
+      <div><img style="width: 250px;" src="img/csharp_logo.svg"/></div>
+  </div>
+  <div class="r-hstack justify-center fragment">
+      <div><img style="width: 250px; margin-right: 100px;" src="img/logo_swift.svg"/></div>
+      <div><img style="width: 100px; margin-right: 100px;" src="img/logo_java.svg"/></div>
+      <div><img style="width: 150px;" src="img/python.svg"/></div>
+  </div>
 </section>
 
 <!-- ============================================================
@@ -220,12 +235,11 @@
 
 <section class="slide-red" data-transition="fade-in fade-out">
   <img style="width: 40%;" src="img/rust_logo_white.png" />
-  <h2>Qt Bridge for <i class="w700">Rust</i></h2>
 </section>
 
 <!-- Rust: the language -->
 <section data-transition="fade-in fade-out" data-background-image="img/background_rust.svg">
-  <h3>Why <i class="qt-mandarin">Rust</i>?</h3>
+  <h3>Why <i class="rust-red">Rust</i>?</h3>
   <div class="columns c60-40 v-center">
    <div>
     <ul class="x60">
@@ -256,10 +270,9 @@
 
 <!-- Rust: side-by-side with C++ -->
 <section data-transition="fade-in fade-out" data-background-image="img/background_rust.svg">
-  <h4><i class="qt-neon">C++</i> and <i class="qt-mandarin">Rust</i>, side by side</h4>
+  <h3><i class="cpp-blue">C++</i> and <i class="rust-red">Rust</i>, side by side</h3>
   <div class="columns c50-50">
    <div>
-    <p class="x40 qt-neon">C++</p>
     <pre class="x40"><code class="cpp" data-trim data-noescape>
     class Person {
     public:
@@ -282,7 +295,6 @@
     </code></pre>
    </div>
    <div>
-    <p class="x40 qt-mandarin">Rust</p>
     <pre class="x40"><code class="rust" data-trim data-noescape>
     struct Person {
         name: String,
@@ -291,8 +303,7 @@
 
     impl Person {
         fn talk(&amp;self) {
-            println!("{} says Hello!",
-                     self.name);
+            println!("{} says Hello!", self.name);
         }
     }
 
@@ -311,12 +322,12 @@
 <!-- Rust: getting it -->
 <section data-transition="fade-in fade-out" data-background-image="img/background_rust.svg">
   <h3>Getting the <i class="qt-mandarin">Rust</i> bridge</h3>
-  <div class="columns c40-60 v-center">
+  <div class="columns c60-40 v-center">
    <div>
-    <ul class="x50">
+    <ul class="x80">
       <li>Rust &amp; Cargo <b>&ge; 1.88</b></li>
       <li>Qt <b>6.10</b> or newer, with <code>qmake</code> on <code>PATH</code></li>
-      <li>A C++ toolchain</li>
+      <li>A C++ toolchain (due to CXX dependency)</li>
       <li>Linux x86_64, Windows x64, macOS arm64 <i>(experimental)</i></li>
     </ul>
    </div>
@@ -327,11 +338,10 @@
     [dependencies]
     qtbridge = "*"
     </code></pre>
-    <p class="x40">On Ubuntu / Debian:</p>
+    <p class="x40"></p>
     <pre class="x50"><code class="bash" data-trim data-noescape>
-    $ sudo apt install -y qt6-base-dev \
-        qt6-declarative-dev qt6-base-private-dev
-    $ cargo run
+      $ cd path/to/code
+      $ cargo run
     </code></pre>
    </div>
   </div>
@@ -339,11 +349,11 @@
 
 <!-- Rust: hello Qt button -->
 <section data-transition="fade-in fade-out" data-background-image="img/background_rust.svg">
-  <h4>A button that says <i class="qt-mandarin">Hello, Qt!</i></h4>
+  <h3>A button that says <i class="rust-red">Hello, Qt!</i></h3>
   <div class="columns c50-50">
    <div>
-    <p class="x40 qt-mandarin">main.rs</p>
-    <pre class="x40"><code class="rust" data-trim data-noescape>
+    <pre class="x50"><code class="rust" data-trim data-noescape>
+    // main.rs
     use qtbridge::{QApp, qobject};
 
     #[derive(Default)]
@@ -366,8 +376,8 @@
     </code></pre>
    </div>
    <div>
-    <p class="x40 qt-neon">Main.qml</p>
-    <pre class="x40"><code class="qml" data-trim data-noescape>
+    <pre class="x50"><code class="qml" data-trim data-noescape>
+    // Main.qml
     import QtQuick
     import QtQuick.Controls
     import hello_world
@@ -383,57 +393,29 @@
         }
     }
     </code></pre>
-    <p class="x40">Attribute macros do the work: <code>#[qobject]</code>,
-       <code>#[qslot]</code>, <code>#[qproperty]</code>, <code>#[qsignal]</code>.</p>
-   </div>
   </div>
 </section>
 
 <!-- Rust: demo -->
 <section data-transition="fade-in fade-out" data-background-image="img/background_rust.svg">
   <h2><i class="qt-mandarin">Demo</i></h2>
-  <div class="white-box x60">
-    <!-- TODO: replace with the real demo (screen recording or live app).
-         Candidates from the qtbridge-rust repo: apps/host_monitor (tokio +
-         multithreading) or apps/color_palette (tokio, reqwest, serde_json). -->
-    <p>Placeholder &mdash; demo to be recorded</p>
-  </div>
 </section>
 
 <!-- Rust: why it matters for KDE -->
 <section data-transition="fade-in fade-out" data-background-image="img/background_rust.svg">
   <h3>Why this matters for <i class="qt-lemon">KDE</i></h3>
   <ul class="x60">
-    <li class="fragment">Someone is <i class="qt-neon">already building it</i>: a prototype sits on top
-        of <code>qtbridge-rust</code> &mdash;
-        <a href="https://github.com/dphaldes/kfbridge-prototypes">kfbridge-prototypes</a></li>
+    <li class="fragment">There is <i class="qt-neon">already</i> some interest: <a href="https://github.com/dphaldes/kfbridge-prototypes">kfbridge-prototypes</a></li>
     <li class="fragment">It mirrors the Qt Bridges layout: <code>kf-gen</code> is the codegen
         that builds <code>kf-type-lib</code></li>
     <li class="fragment"><code>kf-types</code> is a parallel attempt at <i>hand-rolled</i> bindings</li>
     <li class="fragment">A branch is headed <i class="qt-lemon">upstream on KDE Invent</i> once it works</li>
-  </ul>
-</section>
-
-<section data-transition="fade-in fade-out" data-background-image="img/background_rust.svg">
-  <h3>KDE Frameworks in Rust &mdash; <i class="qt-mandarin">status</i></h3>
-  <div class="columns c50-50">
-   <div>
-    <h4 class="x80 qt-neon">Working</h4>
-    <ul class="x60">
-      <li><code>ki18n</code> is up and running</li>
-      <li>Enough that <code>cxx-kde-frameworks</code> is expected to move over to it</li>
+    <li class="fragment">Rusty already
+      <ul>
+        <li><code>ki18n</code> is up and running</li>
+        <li>Enough that <code>cxx-kde-frameworks</code> is expected to move over to it</li>
+      </ul>
     </ul>
-   </div>
-   <div>
-    <h4 class="x80 qt-mandarin">Blocked</h4>
-    <ul class="x60">
-      <li><code>kf-gen</code> / <code>kf-type-lib</code>: no access to the <code>qtbridge</code> types yet</li>
-      <li><code>kf-types</code>: failing for a separate reason, still being worked on</li>
-    </ul>
-   </div>
-  </div>
-  <p class="x40 fragment">The gap is <i class="qt-neon">upstream type exposure</i> &mdash; exactly the
-     kind of feedback a pre-release wants.</p>
 </section>
 
 <!-- Rust: where it fits in KDE (analysis, cross-referenced with the repos) -->
@@ -443,16 +425,16 @@
    <div>
     <h4 class="x80 qt-neon">Natural fit</h4>
     <ul class="x50">
-      <li class="fragment">The bridge is <b>QML-only</b> by design &mdash; which is exactly how
+      <li class="fragment">The bridge is <b>QML-only</b> by design - which is exactly how
           <i class="qt-lemon">Kirigami</i> apps and <i class="qt-lemon">Plasma</i> applets
           are already built: QML UI, logic behind it</li>
       <li class="fragment">KDE already documents a <i class="qt-lemon">&ldquo;Kirigami with
-          Rust&rdquo;</i> path &mdash; the bridge is a new engine under a road that exists</li>
+          Rust&rdquo;</i> path - the bridge is a new engine under a road that exists</li>
       <li class="fragment">There is precedent: <i class="qt-lemon">Angelfish</i> ships Rust
           today in its ad blocker</li>
       <li class="fragment">New apps and applets, not ports</li>
       <li class="fragment"><code>tokio</code> works (see the <code>host_monitor</code>
-          example) &mdash; monitors, indexers and backup tools can do real background
+          example) - monitors, indexers and backup tools can do real background
           work without stalling the UI</li>
       <li class="fragment">The <code>serde_json</code> feature hands JSON straight to QML</li>
     </ul>
@@ -460,11 +442,11 @@
    <div>
     <h4 class="x80 qt-mandarin">Not the tool for</h4>
     <ul class="x50">
-      <li class="fragment"><b>Qt Widgets</b> apps &mdash; not supported; most of KDE's
+      <li class="fragment"><b>Qt Widgets</b> apps - not supported; most of KDE's
           long-lived applications are Widgets</li>
       <li class="fragment">Qt modules that only ship a C++ API</li>
       <li class="fragment">Anything needing to <i>mix</i> Rust and C++ in one target
-          &mdash; that is <a href="https://github.com/KDAB/cxx-qt">CXX-Qt</a>'s job today</li>
+          - that is <a href="https://github.com/KDAB/cxx-qt">CXX-Qt</a>'s job today</li>
     </ul>
    </div>
   </div>
@@ -474,19 +456,18 @@
 <section data-transition="fade-in fade-out" data-background-image="img/background_rust.svg">
   <h3>Akademy has asked this <i class="qt-neon">before</i></h3>
   <ul class="x60">
-    <li class="fragment"><b>2017</b> &mdash; Emma: Rust support in KDevelop</li>
-    <li class="fragment"><b>2020</b> &mdash; M&eacute;ven: Rust in KDE</li>
-    <li class="fragment"><b>2023</b> &mdash; Tobias Hunger: <i>A UI in Rust &amp; Slint</i></li>
-    <li class="fragment"><b>2024</b> &mdash; Joshua Goins: <i>C++, Rust and Qt: Easier than you think</i></li>
-    <li class="fragment"><b>2025</b> &mdash; Nicolas Fella: <i>Language Bindings: The Future of KDE?</i>
-        &mdash; by then many KDE libraries already had Python and Rust bindings</li>
-    <li class="fragment"><b>2026</b> &mdash; and now Qt itself turns up with an answer</li>
+    <li class="fragment"><b>2017</b> - Emma: Rust support in KDevelop</li>
+    <li class="fragment"><b>2020</b> - M&eacute;ven: Rust in KDE</li>
+    <li class="fragment"><b>2023</b> - Tobias Hunger: <i>A UI in Rust &amp; Slint</i></li>
+    <li class="fragment"><b>2024</b> - Joshua Goins: <i>C++, Rust and Qt: Easier than you think</i></li>
+    <li class="fragment"><b>2025</b> - Nicolas Fella: <i>Language Bindings: The Future of KDE?</i></li>
+    <li class="fragment"><b>2026</b> - and now Qt itself turns up with an answer</li>
   </ul>
 </section>
 
 <section data-transition="fade-in fade-out" data-background-image="img/background_rust.svg">
-  <h4>The Rust + Qt landscape</h4>
-  <table class="x40">
+  <h4>The Rust + Qt* landscape</h4>
+  <table class="x50">
     <thead>
       <tr>
         <th></th>
@@ -499,34 +480,31 @@
       <tr><td>UI language</td><td>QML</td><td>own <code>.slint</code> DSL</td><td>QML</td></tr>
       <tr><td>Renderer</td><td>Qt Quick</td><td>its own</td><td>Qt Quick</td></tr>
       <tr><td>Kirigami / KDE Frameworks</td><td>yes</td><td><b>no</b></td><td>yes</td></tr>
-      <tr><td>Qt Widgets</td><td>yes</td><td>&mdash;</td><td>no</td></tr>
+      <tr><td>Qt Widgets</td><td>yes</td><td>-</td><td>no</td></tr>
       <tr><td>Drop into an existing <i>Qt</i> app</td><td><b>yes, that is the point</b></td><td>no</td><td>not yet</td></tr>
       <tr><td>Build</td><td>CMake + Corrosion</td><td><code>cargo</code></td><td><code>cargo</code></td></tr>
-      <tr><td>Maintained by</td><td>KDAB, <b>no CLA</b></td><td>Slint GmbH, <b>CLA</b></td><td>The Qt Company, <i>upstream</i></td></tr>
+      <tr><td>Maintained by</td><td>KDAB</td><td>Slint GmbH</td><td>The Qt Company</td></tr>
     </tbody>
   </table>
+  <p class="x60">More fun at <a href="https://areweguiyet.com/">Are we GUI yet?</a></p>
 </section>
 
 <section data-transition="fade-in fade-out" data-background-image="img/background_rust.svg">
   <h3>So why not just <i class="qt-neon">CXX-Qt</i>?</h3>
   <ul class="x60">
-    <li class="fragment">You often should! They solve <i class="qt-neon">different</i> problems</li>
-    <li class="fragment">CXX-Qt is for adding Rust <i>into</i> an app that already exists &mdash;
-        Joshua's advice in 2024 was &ldquo;start small and work your way up in existing
-        applications&rdquo;. For most of KDE, that is still the right advice.</li>
-    <li class="fragment">The Qt Bridge is for the app that <i class="qt-lemon">does not exist yet</i>,
-        written by someone who does not want to touch CMake or C++ at all</li>
-    <li class="fragment">Different question, different tool: <i>&ldquo;make my C++ app safer&rdquo;</i>
-        versus <i>&ldquo;let me build a KDE app without leaving Rust&rdquo;</i></li>
+    <li class="fragment">They solve <i class="qt-lemon">different</i> problems</li>
+    <li class="fragment">CXX-Qt is for adding Rust <i>into</i> an app that already exists</li>
+    <li class="fragment">The Qt Bridge is for a <i class="qt-neon">new generation</i> of applications</li>
   </ul>
+  <p class="fragment x60"><i>&ldquo;make my C++ app safer&rdquo;</i><br>vs<br><i>&ldquo;let me build a KDE app without leaving Rust&rdquo;</i></p>
 </section>
 
 <section data-transition="fade-in fade-out" data-background-image="img/background_rust.svg">
-  <h4>Boilerplate, honestly compared</h4>
+  <h3>Code comparison</h3>
   <div class="columns c50-50">
    <div>
-    <p class="x40 qt-neon">CXX-Qt</p>
-    <pre class="x40"><code class="rust" data-trim data-noescape>
+    <h4>CXX-Qt</h4>
+    <pre class="x50"><code class="rust" data-trim data-noescape>
     #[cxx_qt::bridge]
     pub mod qobject {
         unsafe extern "RustQt" {
@@ -540,8 +518,8 @@
     <p class="x40">Plus CMake, plus Corrosion, to wire Cargo into the build.</p>
    </div>
    <div>
-    <p class="x40 qt-mandarin">Qt Bridge</p>
-    <pre class="x40"><code class="rust" data-trim data-noescape>
+    <h4>Qt Bridge</h4>
+    <pre class="x50"><code class="rust" data-trim data-noescape>
     #[derive(Default)]
     pub struct MyObject {
         number: i32,
@@ -557,46 +535,30 @@
     }
     </code></pre>
     <p class="x40">Plus nothing. <code>cargo run</code>.</p>
-    <p class="x40 fragment">That difference <i class="qt-neon">is</i> the product.
-       It is also why CXX-Qt remains the more capable of the two.</p>
    </div>
   </div>
 </section>
 
 <section data-transition="fade-in fade-out" data-background-image="img/background_rust.svg">
-  <h3>And why not <i class="qt-lemon">Slint</i>?</h3>
+  <h3>The <i class="qt-mandarin">CXX-Qt & Qt Bridges</i> convergence</h3>
   <ul class="x60">
-    <li class="fragment">It is genuinely good, and built by people from <i class="qt-neon">this</i>
-        community &mdash; Slint's founders came out of KDE and Trolltech</li>
-    <li class="fragment">Its UI language is declarative, strongly typed and deliberately
-        <i>non-Turing-complete</i>; it compiles ahead of time and scales down to microcontrollers</li>
-    <li class="fragment">But for KDE it means <b>leaving the platform</b>: no Kirigami,
-        no KDE Frameworks, no Qt Quick Controls, none of our UI vocabulary</li>
-    <li class="fragment">And its <b>CLA relicenses contributions</b> &mdash; a real
-        consideration for a community that has been careful about exactly this</li>
-  </ul>
-</section>
-
-<section data-transition="fade-in fade-out" data-background-image="img/background_rust.svg">
-  <h3>The <i class="qt-mandarin">CXX-Qt</i> convergence</h3>
-  <ul class="x60">
-    <li class="fragment">Both build on <a href="https://cxx.rs/">CXX</a> &mdash; the same
+    <li class="fragment">Both build on <a href="https://cxx.rs/">CXX</a> - the same
         foundation underneath</li>
     <li class="fragment">KDE's Rust work so far went through <code>cxx-kde-frameworks</code>
         (CXX-Qt based); the prototype is moving <i class="qt-neon">to</i> the bridge</li>
-    <li class="fragment">Meanwhile <code>qtbridge-rust</code> lists
-        <b>CXX-Qt interoperability</b> as a stated future plan</li>
-    <li class="fragment">So the two paths are converging &mdash; KDE does not have to
+    <li class="fragment">Meanwhile <code>qtbridge-rust</code> has
+        <b>CXX-Qt interoperability</b> (qt build tools + types)</li>
+    <li class="fragment">KDE does not have to
         pick a winner, but it <i class="qt-lemon">does</i> get to influence where they meet</li>
   </ul>
 </section>
 
 <!-- Rust: summary -->
 <section data-transition="fade-in fade-out" data-background-image="img/background_rust.svg">
-  <h3><i class="qt-mandarin">Rust</i> &mdash; in summary</h3>
-  <ul class="x60">
+  <h3><i class="qt-mandarin">Rust</i> - in summary</h3>
+  <ul class="x80">
     <li class="fragment">QML for the UI, safe Rust for the logic, <b>no C++ written by hand</b></li>
-    <li class="fragment">One dependency (<code>qtbridge</code>) and four attribute macros to learn</li>
+    <li class="fragment">One dependency (<code>qtbridge</code>) and some attribute macros to learn</li>
     <li class="fragment">KDE Frameworks bindings are <i class="qt-neon">already in prototype</i></li>
     <li class="fragment">Need C++ interop or Qt Widgets today? Use
         <a href="https://github.com/KDAB/cxx-qt">CXX-Qt</a> instead</li>
@@ -607,14 +569,13 @@
      PART 2 — C#
      ============================================================ -->
 
-<section class="slide-gray" data-transition="fade-in fade-out">
-  <img style="width: 30%;" src="img/csharp_logo.svg" />
-  <h2>Qt Bridge for <i class="w700">C#</i></h2>
+<section class="slide-purple" data-transition="fade-in fade-out">
+  <img style="width: 40%;" src="img/csharp_logo.svg" />
 </section>
 
 <!-- C#: the language -->
 <section data-transition="fade-in fade-out" data-background-image="img/background_csharp.svg">
-  <h3>Why <i class="qt-violet">C#</i>?</h3>
+  <h3>Why <i class="csharp-light-purple">C#</i>?</h3>
   <div class="columns c60-40 v-center">
    <div>
     <ul class="x60">
@@ -643,10 +604,9 @@
 
 <!-- C#: side-by-side with C++ -->
 <section data-transition="fade-in fade-out" data-background-image="img/background_csharp.svg">
-  <h4><i class="qt-neon">C++</i> and <i class="qt-violet">C#</i>, side by side</h4>
+  <h4><i class="qt-neon">C++</i> and <i class="csharp-light-purple">C#</i>, side by side</h4>
   <div class="columns c50-50">
    <div>
-    <p class="x40 qt-neon">C++</p>
     <pre class="x40"><code class="cpp" data-trim data-noescape>
     class Person {
     public:
@@ -669,7 +629,6 @@
     </code></pre>
    </div>
    <div>
-    <p class="x40 qt-violet">C#</p>
     <pre class="x40"><code class="csharp" data-trim data-noescape>
     public class Person(string name, int age)
     {
@@ -679,6 +638,7 @@
         public void Talk() =&gt;
             Console.WriteLine($"{Name} says Hello!");
     }
+
 
     public class Program
     {
@@ -695,10 +655,10 @@
 
 <!-- C#: getting it -->
 <section data-transition="fade-in fade-out" data-background-image="img/background_csharp.svg">
-  <h3>Getting the <i class="qt-violet">C#</i> bridge</h3>
+  <h3>Getting the <i class="csharp-light-purple">C#</i> bridge</h3>
   <div class="columns c40-60 v-center">
    <div>
-    <ul class="x50">
+    <ul class="x60">
       <li><b>.NET SDK 8+</b></li>
       <li>CMake and Ninja on <code>PATH</code></li>
       <li>A C++ toolchain</li>
@@ -707,29 +667,26 @@
     <p class="x40">You never write the CMake or the C++ yourself.</p>
    </div>
    <div>
-    <p class="x40">From a template:</p>
+    <p class="x50">From a template:</p>
     <pre class="x50"><code class="bash" data-trim data-noescape>
     $ dotnet new install QtGroup.Qt.Bridge.CSharp.Templates
     $ dotnet new qt -n MyQtApp &amp;&amp; cd MyQtApp
-    $ dotnet build -p:QtDir=/path/to/qt-prefix
+    $ dotnet build -p:QtDir=/path/to/qt
     $ dotnet run
     </code></pre>
-    <p class="x40">Or into an existing project:</p>
+    <p class="x50">Or into an existing project:</p>
     <pre class="x50"><code class="bash" data-trim data-noescape>
-    $ dotnet add package \
-        QtGroup.Qt.Bridge.CSharp.linux-x64 \
-        --version 0.3.*-*
-    </code></pre>
+    $ dotnet add package QtGroup.Qt.Bridge.CSharp.linux-x64</code></pre>
    </div>
   </div>
 </section>
 
 <!-- C#: hello Qt button -->
 <section data-transition="fade-in fade-out" data-background-image="img/background_csharp.svg">
-  <h4>A button that says <i class="qt-violet">Hello, Qt!</i></h4>
+  <h4>A button that says <i class="csharp-light-purple">Hello, Qt!</i></h4>
   <div class="columns c50-50">
    <div>
-    <p class="x40 qt-violet">Backend.cs / Program.cs</p>
+    <p class="x40 csharp-light-purple">Backend.cs / Program.cs</p>
     <pre class="x40"><code class="csharp" data-trim data-noescape>
     using Qt.Quick;
 
@@ -768,7 +725,7 @@
         }
     }
     </code></pre>
-    <p class="x40">No attributes needed &mdash; public types are exposed by default,
+    <p class="x40">No attributes needed - public types are exposed by default,
        <code>PascalCase</code> becoming <code>camelCase</code> in QML.
        <code>[Qt.Ignore]</code> and <code>[Qt.Include]</code> fine-tune it.</p>
    </div>
@@ -777,36 +734,57 @@
 
 <!-- C#: demo -->
 <section data-transition="fade-in fade-out" data-background-image="img/background_csharp.svg">
-  <h2><i class="qt-violet">Demo</i></h2>
-  <div class="white-box x60">
-    <!-- TODO: replace with the real demo (screen recording or live app).
-         Candidates from the qtbridge-csharp repo: examples/Bookshelf,
-         examples/CityTemperatures, examples/SpreadsheetSandbox. -->
-    <p>Placeholder &mdash; demo to be recorded</p>
-  </div>
+  <h2><i class="csharp-light-purple">Demo</i></h2>
 </section>
 
 <!-- C#: why it matters for KDE -->
 <section data-transition="fade-in fade-out" data-background-image="img/background_csharp.svg">
   <h3>Why this matters for <i class="qt-lemon">KDE</i></h3>
-  <!-- NOTE: unlike the Rust part, there is no KDE-side C# effort to report on.
-       The Rust slides are backed by dphaldes' kfbridge-prototypes notes; this
-       section is framed as an opportunity instead. If a KDE C# effort appears
-       before the talk, swap this for a status slide mirroring the Rust one. -->
   <ul class="x60">
-    <li class="fragment">No <i>current</i> KDE C# effort &mdash; the last one,
-        <code>QtSharp</code>, has not moved since 2022</li>
+    <li class="fragment">dotnet wants to have a presence on Linux</li>
+    <li class="fragment">No <i>current</i> KDE C# effort</li>
     <li class="fragment">It is the <b>lowest-friction bridge</b>: plain public classes are exposed
         automatically, so there is no macro or annotation vocabulary to learn first</li>
     <li class="fragment">C# developers already know <i class="qt-neon">MVVM and data binding</i>
-        &mdash; <code>INotifyPropertyChanged</code> drives a QML binding the same way it drives XAML</li>
+        - <code>INotifyPropertyChanged</code> drives a QML binding the same way it drives XAML</li>
     <li class="fragment">This is a <i class="qt-lemon">recruiting</i> play more than a porting one:
-        the Windows desktop world is full of people who have never had a reason to try Qt</li>
+        the Windows desktop world is full of people who have never had a reason to try Qt
+        - and KDE <i class="qt-neon">already ships to them</i></li>
   </ul>
 </section>
 
+<!-- C#: the KDE-on-Windows connection -->
 <section data-transition="fade-in fade-out" data-background-image="img/background_csharp.svg">
-  <h3>What a KDE <i class="qt-violet">C#</i> effort would face</h3>
+  <h3>KDE is <i class="qt-neon">already on Windows</i></h3>
+  <div class="columns c50-50">
+   <div>
+    <h4 class="x80 qt-lemon">The funnel exists</h4>
+    <ul class="x50">
+      <li class="fragment">Krita, Kdenlive, digiKam, Okular, Kate, KDE Connect - all in the
+          <b>Microsoft Store</b>, built by <code>Craft</code> and the binary factory</li>
+      <li class="fragment">Those users are the <i>same population</i> as the C# developers</li>
+      <li class="fragment">Today that funnel runs <b>one way</b>: they can install a KDE app,
+          but not hack on it without first learning C++ and CMake</li>
+    </ul>
+   </div>
+   <div>
+    <h4 class="x80 csharp-light-purple">And it fits the bridge</h4>
+    <ul class="x50">
+      <li class="fragment"><b>Windows x64 + Linux x64</b> are contained in the KDE's shipping matrix for
+          those apps</li>
+      <li class="fragment">The .NET runtime is a distro question on Linux; on Windows,
+          <code>Craft</code> already bundles everything</li>
+      <li class="fragment">Windows integration - notifications, taskbar, shell, WinRT - is
+          <i class="qt-mandarin">painful from C++</i> and native from C#</li>
+    </ul>
+   </div>
+  </div>
+  <p class="x50 fragment">&ldquo;come learn our stack&rdquo; becomes
+     <i class="qt-lemon">&ldquo;the app you already run, in the language you already write&rdquo;</i>.</p>
+</section>
+
+<section data-transition="fade-in fade-out" data-background-image="img/background_csharp.svg">
+  <h3>What a KDE <i class="csharp-light-purple">C#</i> effort would face</h3>
   <div class="columns c50-50">
    <div>
     <h4 class="x80 qt-neon">In its favour</h4>
@@ -815,14 +793,16 @@
           <code>TableModel&lt;T&gt;</code> directly</li>
       <li class="fragment">Existing .NET code can be brought along; the bridge is added to a
           project, not built around</li>
+      <li class="fragment">The <i class="qt-neon">KDE-on-Windows</i> apps are already a
+          Windows + Linux x64 story, so the platform gap does not bite them</li>
     </ul>
    </div>
    <div>
-    <h4 class="x80 qt-violet">Against</h4>
+    <h4 class="x80 csharp-light-purple">Against</h4>
     <ul class="x50">
-      <li class="fragment"><b>Windows and Linux x64 only</b> &mdash; no macOS, no ARM</li>
-      <li class="fragment">The Linux workflow is the <i>newer</i> one and needs an external
-          Qt via <code>QtDir</code></li>
+      <li class="fragment"><b>Windows and Linux x64 only</b> - no macOS, no ARM</li>
+      <li class="fragment">Teaching <code>Craft</code> about .NET is <i>new work</i> for the team</li>
+      <li class="fragment">Workflow depending on a Qt installation (so far!)</li>
       <li class="fragment">A .NET runtime dependency is a real packaging question for distros</li>
     </ul>
    </div>
@@ -831,9 +811,9 @@
 
 <!-- C#: summary -->
 <section data-transition="fade-in fade-out" data-background-image="img/background_csharp.svg">
-  <h3><i class="qt-violet">C#</i> &mdash; in summary</h3>
+  <h3><i class="csharp-light-purple">C#</i> - in summary</h3>
   <ul class="x60">
-    <li class="fragment">QML for the UI, ordinary C# for the logic &mdash; plain classes, no glue</li>
+    <li class="fragment">QML for the UI, ordinary C# for the logic - plain classes, no glue</li>
     <li class="fragment"><code>dotnet new qt</code> and you have a running app</li>
     <li class="fragment">Models via <code>ListModel&lt;T&gt;</code>, <code>TableModel&lt;T&gt;</code>
         or an <code>ObservableCollection</code></li>
@@ -846,15 +826,15 @@
      ============================================================ -->
 
 <!-- Cross-cutting: KDE has attempted this before -->
-<section data-transition="fade-in fade-out" data-background-image="img/background_cover.svg">
+<section data-transition="fade-in fade-out">
   <h3>KDE has <i class="qt-neon">been here before</i></h3>
   <div class="columns c50-50">
    <div>
-    <h4 class="x80 qt-violet">The C# attempts</h4>
+    <h4 class="x80 csharp-light-purple">The C# attempts</h4>
     <ul class="x50">
-      <li class="fragment"><b>Qyoto</b> and <b>Kimono</b> &mdash; SMOKE-based bindings on Mono,
+      <li class="fragment"><b>Qyoto</b> and <b>Kimono</b> - SMOKE-based bindings on Mono,
           covering Qt <i>and</i> KDE. Both discontinued.</li>
-      <li class="fragment"><b>QtSharp</b> &mdash; KDE's own wiki still calls it
+      <li class="fragment"><b>QtSharp</b> - KDE's own wiki still calls it
           &ldquo;in active development&rdquo;&hellip; and was last touched in
           <i class="qt-mandarin">November 2022</i></li>
     </ul>
@@ -874,15 +854,11 @@
 </section>
 
 <!-- Cross-cutting: the honest caveats, both bridges -->
-<section data-transition="fade-in fade-out" data-background-image="img/background_cover.svg">
+<section data-transition="fade-in fade-out">
   <h3>Before KDE bets on either</h3>
   <ul class="x60">
-    <li class="fragment"><b>Licensing.</b> Both bridges are
-        <code>LGPL-3.0-only</code> or commercial. Fine for a KDE app under
-        <i class="qt-neon">GPL-2.0-<b>or-later</b></i>, which can move to v3 &mdash;
-        a blocker for anything <i class="qt-mandarin">GPL-2.0-only</i>. Worth
-        checking your app before you start.</li>
-    <li class="fragment"><b>Qt 6.10+</b> for the Rust bridge &mdash; ahead of what most
+    <li class="fragment"><b>Licensing</b> shouldn't be a problem since it follows Qt framework one.</li>
+    <li class="fragment"><b>Qt 6.10+</b> for the Rust bridge - ahead of what most
         distributions ship today, and ahead of KDE's own baseline</li>
     <li class="fragment"><b>Pre-release.</b> Type names, macros and model base classes
         are all still expected to change</li>
@@ -892,7 +868,7 @@
   </ul>
 </section>
 
-<section data-transition="fade-in fade-out" data-background-image="img/background_cover.svg">
+<section data-transition="fade-in fade-out">
   <h2>What we would like from <i class="qt-lemon">you</i></h2>
   <ul class="x80">
     <li class="fragment">Try a bridge on something small and real</li>

@@ -26,16 +26,19 @@
   --qt-midnight: #27138B;
   --qt-mandarin: #FFA615;
   --qt-burgundy: #5F002D;
+  --kde-blue: #78b6e0;
   --python-blue: #4B8BBE;
   --python-dark-blue: #306998;
   --python-yellow: #ffd43B;
   --python-light-yellow: #ffe873;
   --python-gray: #646464;
-  /*--rust-red: #ef4a00;*/
+  --cpp-blue: #3f81b5;
   --rust-red: #a72145;
   --zig-yellow: #ef9f1c;
   --zig-black: #111111;
   --carbon-gray: #353535;
+  --csharp-purple: #5943a8;
+  --csharp-light-purple: #a08ce8;
 }
 
 /*********************************************
@@ -399,6 +402,21 @@
   font-style: normal;
 }
 
+.reveal .kde-blue {
+  color: var(--kde-blue);
+  font-style: normal;
+}
+
+.reveal .cpp-blue {
+  color: var(--cpp-blue);
+  font-style: normal;
+}
+
+.reveal .csharp-light-purple {
+  color: var(--csharp-light-purple);
+  font-style: normal;
+}
+
 .inline {
   background-color: rgba(48, 206, 76, 1);
   color: white;
@@ -449,6 +467,10 @@ a {
 
 .x60 {
   font-size: 60%;
+}
+
+.x70 {
+  font-size: 70%;
 }
 
 .x80 {
@@ -518,6 +540,12 @@ ul>li {
 .slide-gray {
   background: var(--carbon-gray) !important;
   background-color: var(--carbon-gray);
+  color: var(--white) !important;
+}
+
+.slide-purple {
+  background: var(--csharp-purple) !important;
+  background-color: var(--csharp-purple);
   color: var(--white) !important;
 }
 
