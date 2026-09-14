@@ -56,10 +56,6 @@
   <h1 class="r-fit-text">way to write <i class="qt-neon">Qt</i> code</h1>
 </section>
 
-<section data-transition="fade-in fade-out" data-background-image="img/background_cpp.svg">
-  <h1 class="r-fit-text"><i class="cpp-blue">C++</i> has been the most popular</h1>
-  <h1 class="r-fit-text">way to write <i class="qt-neon">Qt</i> code</h1>
-</section>
 
 <!-- Qt for Python: acknowledge the success this is building on -->
 <section data-transition="fade-in fade-out">
@@ -141,8 +137,8 @@
 <section data-transition="fade-in fade-out">
   <h3>Changing the maintenance story</h3>
   <div class="columns c50-50">
-   <div>
-    <h4 class="x80 qt-lemon fragment">A binding</h4>
+   <div class="fragment">
+    <h4 class="x80 qt-lemon">A binding</h4>
     <ul class="x50">
       <li>Surface to maintain = <b>the size of Qt</b></li>
       <li>Every new Qt class, enum and overload is more work owed</li>
@@ -150,8 +146,8 @@
       <li>This is precisely how Qyoto, Kimono and many others died</li>
     </ul>
    </div>
-   <div>
-    <h4 class="x80 qt-mandarin fragment">A bridge</h4>
+   <div class="fragment">
+    <h4 class="x80 qt-mandarin">A bridge</h4>
     <ul class="x50">
       <li>Surface to maintain = <b>the meta-object boundary</b>: properties, slots, signals, models</li>
       <li>That boundary is small, and it has been stable for <i class="qt-lemon">decades</i></li>
@@ -422,7 +418,7 @@
 <section data-transition="fade-in fade-out" data-background-image="img/background_rust.svg">
   <h3>Where this <i class="qt-neon">fits</i> in KDE</h3>
   <div class="columns c50-50">
-   <div>
+   <div class="fragment">
     <h4 class="x80 qt-neon">Natural fit</h4>
     <ul class="x50">
       <li class="fragment">The bridge is <b>QML-only</b> by design - which is exactly how
@@ -439,7 +435,7 @@
       <li class="fragment">The <code>serde_json</code> feature hands JSON straight to QML</li>
     </ul>
    </div>
-   <div>
+   <div class="fragment">
     <h4 class="x80 qt-mandarin">Not the tool for</h4>
     <ul class="x50">
       <li class="fragment"><b>Qt Widgets</b> apps - not supported; most of KDE's
